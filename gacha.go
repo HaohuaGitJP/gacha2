@@ -27,15 +27,44 @@ func DrawN(p *Player, n int) ([]*Card, map[Rarity]int) {
 
 func draw() *Card {
 	num := rand.Intn(100)
-
+	var cardName string
 	switch {
 	case num < 80:
-		return &Card{Rarity: RarityN, Name: "スライム"}
+		n := rand.Intn(1)
+		switch n {
+		case 0:
+			cardName = "スライム"
+		case 1:
+			cardName = "ゴブリン"
+
+		return &Card{Rarity: RarityN, Name: cardName}
+		}
 	case num < 95:
-		return &Card{Rarity: RarityR, Name: "オーク"}
+		n := rand.Intn(1)
+		switch n {
+		case 0:
+			cardName = "オーク"
+		case 1:
+			cardName = "ホブゴブリン"
+
+		return &Card{Rarity: RarityN, Name: cardName}
 	case num < 99:
-		return &Card{Rarity: RaritySR, Name: "ドラゴン"}
+		n := rand.Intn(1)
+		switch n {
+		case 0:
+			cardName = "ドラゴン"
+		case 1:
+			cardName = "グリフォン"
+
+		return &Card{Rarity: RaritySR, Name: cardName}
 	default:
-		return &Card{Rarity: RarityXR, Name: "イフリート"}
+		n := rand.Intn(1)
+		switch n {
+		case 0:
+			cardName = "イフリート"
+		case 1:
+			cardName = "バハムート"
+
+		return &Card{Rarity: RarityXR, Name: cardName}
 	}
 }
