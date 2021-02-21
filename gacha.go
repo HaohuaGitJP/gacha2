@@ -66,3 +66,4 @@ func draw() *Card {
 		}
 		return &Card{Rarity: RarityXR, Name: cardName}
 	}
+}
