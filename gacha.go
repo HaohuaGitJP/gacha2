@@ -30,7 +30,7 @@ func draw() *Card {
 	var cardName string
 	switch {
 	case num < 80:
-		n := rand.Intn(1)
+		n := rand.Intn(2)
 		switch n {
 		case 0:
 			cardName = "スライム"
