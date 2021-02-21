@@ -36,9 +36,8 @@ func draw() *Card {
 			cardName = "スライム"
 		case 1:
 			cardName = "ゴブリン"
-
-		return &Card{Rarity: RarityN, Name: cardName}
 		}
+		return &Card{Rarity: RarityN, Name: cardName}
 	case num < 95:
 		n := rand.Intn(1)
 		switch n {
@@ -46,7 +45,7 @@ func draw() *Card {
 			cardName = "オーク"
 		case 1:
 			cardName = "ホブゴブリン"
-
+		}
 		return &Card{Rarity: RarityN, Name: cardName}
 	case num < 99:
 		n := rand.Intn(1)
@@ -55,7 +54,7 @@ func draw() *Card {
 			cardName = "ドラゴン"
 		case 1:
 			cardName = "グリフォン"
-
+		}
 		return &Card{Rarity: RaritySR, Name: cardName}
 	default:
 		n := rand.Intn(1)
@@ -64,7 +63,6 @@ func draw() *Card {
 			cardName = "イフリート"
 		case 1:
 			cardName = "バハムート"
-
+		}
 		return &Card{Rarity: RarityXR, Name: cardName}
 	}
-}
